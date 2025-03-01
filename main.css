@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* AÑADIR COMENTARIOS (s) (m) (l) */
 /* COLORES */
 body{
     --verde_oscuro:#0a9474;
@@ -162,6 +164,7 @@ article .cinta-text{
         padding: 20px;
         border-radius: 20px;
         height: 500px;
+        overflow: hidden;
 
     }
     .carrousel .carr-element{
@@ -182,13 +185,22 @@ article .cinta-text{
         width: 200%;
         /* background-color: var(--fondo_grisaceo); */
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-flow: row nowrap;
         align-items: center;
+        /* ---------------------------------------------------------------------------------------------- */
+        transition: all .5s ease;
+        transform: translateX(0%);
     }
     .carrousel .carr-element{
         /* DIVIDIR ENTRE EL NUMERO DE ELEMENTOS Q HAY EN TOTAL */
-        width: calc(100% / 2);
+        width: calc(100% / 4  -4em) ;
+        /* padding: 40px 150px; */
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* flex-direction: column; */
     }
     .carrousel .columna p{
         padding: 1em;
@@ -196,13 +208,14 @@ article .cinta-text{
         color: var(--naranja);
         font-size: 1.6rem;
         padding-bottom: 100px;
-        padding-right: 200px;
+        padding-right: 20px;
     } 
     .carrousel .columna h3{
         font-size: 2rem;
         padding-left: 20px;
+        padding-bottom: 20px;
     }
-    .carrousel .puntos{
+    .puntos{
         width: 100%;
         /* background-color: var(--enlaces); */
         padding: 1em;
@@ -212,12 +225,26 @@ article .cinta-text{
         justify-content: center;    
         align-items: center;
     }
-    .carrousel .punto{
+    .punto{
+        text-decoration: none;
         width: 2em;
         height: 2em;
-        /* background-color: var(--enlaces); */
+        list-style: none;
         border-radius: 50%;
-        margin: 1em;
+        background: #eeebd4;
+        box-shadow:  7px 7px 14px #9b998a,
+                    -7px -7px 14px #ffffff;
+        margin: 1em 1em 0;
+    }
+    .punto:hover{
+        background: #e4d5c4;
+        box-shadow: inset 7px 7px 23px #5b554e,
+            inset -7px -7px 23px #ffffff;
+    }
+    .punto.activo{
+        background: #d6b084;
+        box-shadow: inset 7px 7px 23px #5b554e,
+            inset -7px -7px 23px #ffffff;
     }
     .carrousel .columna img {
         display: block;
@@ -238,6 +265,7 @@ footer{
 }
 footer .divider{
     width: 1300px;
+    max-width: 1600px;
 }
 footer .columna{
     color: white;
@@ -326,5 +354,9 @@ footer .columna{
    .columna {
         width: 100%;
         margin-bottom: 20px;
+    }
+    footer .divider{
+        width: 70%;
+        min-width: 200px;
     }
 }
