@@ -3,14 +3,18 @@
 body{
     --verde_claro:#27d687;
     --fondo_blanco:#f9f8fd;
+    --fondo_azulado:#eeeefc;
+    --fondo_grisaceo:#b5d4cf;
+    --enlaces:#65537f;
 }
-
 *{
     box-sizing: border-box;
-}
-body{
     margin: 0;
     padding: 0;
+}
+body{
+    background: url('imagenes/texture-bg.jpg');
+    background-repeat: repeat; 
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -22,12 +26,123 @@ html{
     scroll-margin-top: 60px;
 }
 
+
+/* Pantallas Grandes */
+/* NAVBAR */
+nav {
+    background: var(--fondo_azulado);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+    box-shadow: 0 4px 10px rgba(21, 21, 46, 0.1);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    margin-left: 20px !important;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+nav ul a li {
+    list-style: none;
+    margin: 0 60px;
+    display: inline-block;
+    border-radius: 60px;
+}
+
+nav ul a li {
+    text-decoration: none;
+    color: var(--enlaces);
+}
+
+.opciones{
+    background-color: var(--fondo_grisaceo);
+    padding: 10px 50px;
+}
+#li_active{
+    background-color: var(--fondo_blanco);
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(21, 21, 46, 0.1);
+   
+}
+a #li_active {
+    color: var(--verde_claro);
+}
+#enlace-tienda{
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(21, 21, 46, 0.1);
+}
+
+/* PORTADA */
+#portada{
+    width: 100%;
+    
+}
+
 /* CARROUSEL */
+article{
+    background: url('imagenes/pikmin-background-04.webp');
+    background-size: cover;
+    background-position: center;
+    height: 78.13vw;
+    display: flex;
+    /* justify-content: center; */
+    /* PRUEBAS */
+     flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center;
+    
+    
+}
+article .cintas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    /* height: 500px; */
+    height: 16.04vw;
+    min-width: auto;
+    min-height: 250px;
+    /* PRUEBAS */
+    position: relative; /* Añade posición relativa al contenedor */
+}
+article .cinta-text{
+    color: white;
+    font-size: 2.5vw;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+    /* PRUEBAS */ 
+    z-index: 3;
+    position: absolute; /* Añade posición absoluta al texto */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
+}
 .carousel {
+    height: 500px;
     display: flex;
     overflow: hidden;
     position: relative;
-    background: url('imagenes/pikmin-background-04.webp');
+    /* PRUEBAS */
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el carrusel */
+    border-radius: 10px;
 }
 
 .carousel-track {
@@ -76,7 +191,68 @@ html{
 .carousel-button.next {
     right: 10px;
 }
-
 .carousel-button:focus + .carousel-track {
     transform: translateX(-100%);
+}
+/* footer */
+footer{
+    background: url('imagenes/grass.webp');
+    background-size: cover;
+    height: 1200px;
+}
+.divider{
+    margin: auto;
+    padding: 90px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .divider{
+    width: 1300px;
+}
+.dos-columnas{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 0;
+}
+.columna{
+    width:100%;
+    padding: 20px 0;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.download-app{
+    width: 400px;
+    padding: 20px;
+}
+
+#logo-app{
+    margin: 0 auto;
+    height:350px;
+    border-radius: 30px;
+}
+#privacidad{
+    color: white;
+    text-decoration: solid;
+    text-align: center;
+    padding: 130px 0 0;
+}
+#privacidad a{
+    color: white;
+    padding-bottom: 20px;
+    display: block;
+    margin-bottom: 20px; 
+}
+
+/* PANTALLAS MEDIANAS */
+@media screen and (min-width:640px) {
+    
+}
+/* PANTALLAS PEQUEÑAS */
+@media screen and (min-width:60px) {
+    
 }
