@@ -69,6 +69,7 @@ nav .logo {
     align-items: center;
     height: 90px;
     margin-left: 20px !important;
+    z-index: 11; /* Ensure the logo is above the menu */
 }
 
 nav ul {
@@ -95,6 +96,12 @@ nav ul a li {
 .opciones{
     background-color: var(--fondo_grisaceo);
     padding: 10px 50px;
+}
+.opciones:hover{
+    /* background-color: var(--fondo_grisaceo); */
+    background: #b5d4cf;
+    box-shadow: inset 7px 7px 23px #659891,
+            inset -7px -7px 23px #cef0f4;
 }
 #li_active{
     background-color: var(--fondo_blanco);
@@ -164,6 +171,7 @@ article .cinta-text{
         padding: 20px;
         border-radius: 20px;
         height: 500px;
+        min-height: fit-content;
         overflow: hidden;
 
     }
@@ -253,8 +261,9 @@ article .cinta-text{
 /* footer */
 footer{
     background: url('imagenes/grass.webp');
+    background-repeat: repeat;
     background-size: cover;
-    height: 1200px;
+    height: fit-content;
 }
 .divider{
     margin: auto;
@@ -298,12 +307,40 @@ footer .columna{
     
 }
 @media (max-width: 768px) {
+    /* PORTADA(s) */
+    header {
+        height: 100vh;
+        /* padding-top: 120px; */
+        color: transparent;
+        background: url('imagenes/background-mobile.png') no-repeat center center;
+        background-size: cover;
+    }
+    #portada {
+        /* height: 100vh; */
+        display: none;
+        /* background: url('imagenes/background-mobile.png') no-repeat center center;
+        background-size: cover; */
+    }
+    #portada img{
+        display: none;
+        
+    }
+
+    /* NAVBAR (s) */
+    nav .logo :hover {
+        /* transform: scale(1.1); */
+        border-radius: 30px;
+        box-shadow: 7px 8px 10px rgb(14, 20, 41);
+    }
+
+
     .carrousel {
         width: 100%;
     }
 
     .carrousel .carr-element {
         width: 100%;
+        margin: 0 60px;
     }
 
     .carrousel .columna p,
@@ -359,4 +396,40 @@ footer .columna{
         width: 70%;
         min-width: 200px;
     }
+}
+    footer i{
+        color: white;
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 180px; 
+    z-index: 10;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav-links a {
+    width: 100%; /* Ensure links take full width */
+}
+
+.nav-links .opciones {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each option */
+    margin-bottom: 10px; /* Add space between options */
+}
+.nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
 }
