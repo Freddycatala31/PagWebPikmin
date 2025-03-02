@@ -10,6 +10,7 @@ body {
     --fondo_grisaceo: #b5d4cf;
     --enlaces: #65537f;
     --naranja: #ffd11f;
+    --parrafos:#203940;
 }
 
 * {
@@ -153,7 +154,8 @@ article {
     background: url('imagenes/pikmin-background-04.webp');
     background-size: cover;
     background-position: center;
-    height: 78.13vw;
+    /* height: 78.13vw; */
+    height: calc(100% +100px);
     display: flex;
     /* justify-content: center; */
     /* PRUEBAS */
@@ -281,6 +283,12 @@ article .cinta-text {
     z-index: 1;
     /* Asegura que el video esté detrás de la imagen */
     border-radius: 30px;
+}
+.dos-columnas .columna div p{
+    height: 20vh;
+    font-size: 1.6rem;
+    color: var(--parrafos);
+   
 }
 
 /* CARROUSEL */
@@ -612,6 +620,7 @@ footer .columna {
     }
 
     /*(s) ARTICLE */
+    
     .contenedor-1elemento iframe {
         position: absolute;
         width: 80%;
@@ -628,7 +637,15 @@ footer .columna {
         color: var(--fondo_blanco);
 
     }
-
+    .dos-columnas .columna div p{
+        height: 20vh;
+        font-size: 1.6rem;
+        color: var(--parrafos);
+       
+    }
+    article{
+        height: calc(100% + 20px)
+    }
     /* (S) carrousel */
     .carrousel {
         width: 100%;
