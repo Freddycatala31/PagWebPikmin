@@ -32,6 +32,13 @@ html{
 
 
 /* Pantallas Grandes */
+header, article, footer{
+    text-align: center;
+    align-self: center;
+}
+#portada-mobile, .image-mobile{
+    display: none;
+}
 /* ELEMENTOS */
 .dos-columnas{
     margin: 0 auto;
@@ -119,7 +126,7 @@ a #li_active {
 }
 
 /* PORTADA */
-#portada{
+#portada, .image-pc{
     width: 100%;
     
 }
@@ -138,6 +145,7 @@ article{
     
     
 }
+
 article .cintas{
     display: flex;
     justify-content: center;
@@ -149,6 +157,39 @@ article .cintas{
     min-height: 250px;
     /* PRUEBAS */
     position: relative; /* Añade posición relativa al contenedor */
+}
+.cintas img{
+    width: 800px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.contenedor-1elemento {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /* padding: 20px; */
+}
+
+.contenedor-1elemento iframe {
+    position: absolute;
+    width: 45%;
+    height: 40%;
+    border: none;
+    z-index: 2;
+    border: solid 7px white;
+    border-radius: 30px;
+}
+
+.contenedor-1elemento .image-pc,
+.contenedor-1elemento .image-mobile {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
 }
 article .cinta-text{
     color: white;
@@ -285,6 +326,12 @@ footer .columna{
     height:350px;
     border-radius: 30px;
 }
+#iconos-enlaces{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
 #privacidad{
     color: white;
     text-decoration: solid;
@@ -299,29 +346,114 @@ footer .columna{
 }
 
 /* PANTALLAS MEDIANAS */
-@media screen and (min-width:640px) {
-    
+@media screen and (min-width:1460px) {
+    article .cintas img{
+        width: 100%;
+        height: 100%;
+    }
+    article{
+        background-repeat: repeat;
+        background-size: min-content;
+        padding-bottom: 30px;
+        height: min-content;
+    }
+    .dos-columnas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .columna {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .carrousel {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .carrousel .carr-element {
+        width: 45%;
+        margin: 0 20px;
+    }
+
+    .carrousel .columna p,
+    .carrousel .columna h3 {
+        text-align: left;
+        padding: 0;
+    }
+
+    .carrousel .columna p {
+        padding-bottom: 1em;
+        padding-right: 0;
+    }
+
+    .carrousel .columna h3 {
+        padding-left: 0;
+    }
+
+    .carr-element img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .divider {
+        overflow: hidden;
+        width: 100%;
+        max-width: 1600px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        top: auto;
+        z-index: auto;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .nav-links a {
+        width: auto; /* Ensure links take their natural width */
+    }
+
+    .nav-links .opciones {
+        box-shadow: none; /* Remove shadow from each option */
+        margin-bottom: 0; /* Remove space between options */
+    }
 }
 /* PANTALLAS PEQUEÑAS */
-@media screen and (min-width:60px) {
-    
-}
 @media (max-width: 768px) {
     /* PORTADA(s) */
     header {
-        height: 100vh;
+        height: 100%;
         /* padding-top: 120px; */
         color: transparent;
-        background: url('imagenes/background-mobile.png') no-repeat center center;
+        /* background: url('imagenes/background-mobile.png') no-repeat center center; */
         background-size: cover;
+        width: 100%;
     }
-    #portada {
+    #portada-mobile, .image-mobile{
+       
+        background-size: cover;
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    #portada, .image-pc{
         /* height: 100vh; */
         display: none;
         /* background: url('imagenes/background-mobile.png') no-repeat center center;
         background-size: cover; */
     }
-    #portada img{
+    #portada img, .image-pc img{
         display: none;
         
     }
@@ -333,7 +465,17 @@ footer .columna{
         box-shadow: 7px 8px 10px rgb(14, 20, 41);
     }
 
-
+    /*(s) ARTICLE */
+    .contenedor-1elemento iframe {
+        position: absolute;
+        width: 80%;
+        height: 26%;
+        border: none;
+        z-index: 2;
+        border: solid 7px white;
+        border-radius: 30px;
+    }
+    /* (S) carrousel */
     .carrousel {
         width: 100%;
     }
@@ -394,42 +536,43 @@ footer .columna{
     }
     footer .divider{
         width: 70%;
-        min-width: 200px;
+        /* min-width: 200px; */
     }
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 180px; 
+        z-index: 10;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .nav-links a {
+        width: 100%; /* Ensure links take full width */
+    }
+    
+    .nav-links .opciones {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each option */
+        margin-bottom: 10px; /* Add space between options */
+    }
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
 }
     footer i{
         color: white;
         font-size: 2rem;
         padding: 0 10px;
     }
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 180px; 
-    z-index: 10;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.nav-links a {
-    width: 100%; /* Ensure links take full width */
-}
-
-.nav-links .opciones {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to each option */
-    margin-bottom: 10px; /* Add space between options */
-}
-.nav-links {
-    display: none;
-}
-
-.nav-links.active {
-    display: flex;
-}

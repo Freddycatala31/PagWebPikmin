@@ -1,9 +1,15 @@
+<!-- ARREGLAR:
+    TAMAÑO CINTA
+    ARREGLAR TAMAÑO DEL DIVIDER Q AFECTA AL ANCHO DE LA PAGINA
+    AJUSTAR TAMAÑO FONDO ARTICLE PARA QUE ENCAGE CON EL CARROUSEL Y NO COLAPSE CON EL FOOTER -->
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet" href="main.css">
     <script defer src="main.js"></script>
     <link rel="icon" href="imagenes/logo-02.png">    
@@ -23,6 +29,7 @@
     <header>
         <h1>PIKMIN BLOOM</h1>
         <img id="portada" src="imagenes/portada-recortada.jpg" alt="">
+        <img id="portada-mobile" src="imagenes/background-mobile.png" alt="">
     </header>
     <article>
         <div class="cintas">
@@ -78,8 +85,9 @@
             <li class="punto"></li>
         </ul>
     </article>
+    
     <footer>
-        <img class="divider" src="imagenes/flower_divider.svg" alt="">
+        <aside><img class="divider" src="imagenes/flower_divider.svg" alt=""></aside>
         <div class="dos-columnas">
             <div class="columna">
                 <img id="logo-app" src="imagenes/logo-border-mini.jpg" alt="">
@@ -93,14 +101,14 @@
             </div>
         </div>
         <!-- 	Pie de página, con enlaces al sitio web real y a las páginas reales de redes sociales -->
-        <div class="tres-columnas">
-            <a href="">
+        <div id="iconos-enlaces">
+            <a href="https://pikminbloom.com/en">
                 <i class="fa-solid fa-globe"></i>
             </a>
-            <a href="">
+            <a href="https://x.com/PikminBloom">
                 <i class="fa-brands fa-square-twitter"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/pikminbloom/?hl=es">
                 <i class="fa-brands fa-square-instagram"></i>
             </a>
         </div>
