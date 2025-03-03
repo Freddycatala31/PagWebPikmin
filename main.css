@@ -415,7 +415,7 @@ footer {
 }
 
 footer .divider {
-    width: 1300px;
+    width: 70vw;
     max-width: 1600px;
 }
 
@@ -632,7 +632,7 @@ footer .columna {
     }
 
     #info-title {
-        font-size: 0.8rem;
+        font-size: 2rem;
         text-shadow: none;
         color: var(--fondo_blanco);
 
@@ -641,6 +641,7 @@ footer .columna {
         height: 20vh;
         font-size: 1.6rem;
         color: var(--parrafos);
+        padding: 0 40px;
        
     }
     article{
@@ -688,12 +689,12 @@ footer .columna {
     }
 
     article .cinta-text {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     .columna .cintas {
-        padding: 20px 0;
-        width: 75%;
+        padding: 10px 20px;
+        /* width: 75%; */
     }
 
     article {
