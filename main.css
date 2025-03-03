@@ -222,7 +222,23 @@ article .cintas {
     position: relative;
     /* Añade posición relativa al contenedor */
 }
-
+.cuadro{
+    margin: 10vh 30vh;
+    background: #caefcf;
+    border-radius: 30px;
+    padding: 20px;
+    width: 60vw;
+    border: solid 2px var(--fondo_blanco);
+}
+.cuadro h2{
+    font-size: 2.5rem;
+    color: var(--verde_oscuro);
+    text-shadow: 6px 6px 17px rgba(255, 255, 255, 1);
+    padding: 20px;
+   
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
 .columna .cintas {
     padding: 20px 0;
     width: 100%;
@@ -692,9 +708,7 @@ footer .columna {
     #info{
         height: 100% !important ;
     }
-    /* .cuadro{
-        margin:20vh ;
-    } */
+   
     .contenedor-1elemento iframe {
         position: absolute;
         width: 80%;
