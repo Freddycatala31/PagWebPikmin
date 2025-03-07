@@ -20,7 +20,7 @@ const grande = document.querySelector('.grande');
 let punto = document.querySelectorAll('.punto');
 let anchomov = 20;
 
-// Función para ajustar los puntos y el valor de anchomov
+// Función para ajustar los puntos y el valor de ancfhomov
 function ajustarPuntos() {
     const puntosContainer = document.querySelector('.puntos');
     if (window.innerWidth <= 600) {

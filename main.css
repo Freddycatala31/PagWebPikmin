@@ -41,6 +41,9 @@ footer {
     text-align: center;
     align-self: center;
 }
+header h1, header h2{
+    display: none;
+}
 
 #portada-mobile,
 .image-mobile {
@@ -225,20 +228,51 @@ article .cintas {
 .cuadro{
     margin: 10vh 30vh;
     background: #caefcf;
+    /* Puntos fondo */
+    background-image: radial-gradient(#e2f6e5 2px, transparent 0);
+    background-size: 20px 20px;
     border-radius: 30px;
-    padding: 20px;
+    padding: 40px 100px;
     width: 60vw;
     border: solid 2px var(--fondo_blanco);
+    
 }
 .cuadro h2{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--verde_oscuro);
-    text-shadow: 6px 6px 17px rgba(255, 255, 255, 1);
     padding: 20px;
-   
+    text-shadow:
+    -3px -3px 0 #ffffff,
+    3px -3px 0 #ffffff,
+    -3px 3px 0 #ffffff,
+    3px 3px 0 #ffffff;
     border-radius: 30px;
     margin-bottom: 50px;
 }
+.cuadro p{
+    font-size: 2rem;
+    color: var(--parrafos);
+    padding: 20px;
+    text-align: justify;
+}
+.cuadro .dos-columnas{
+    border: solid 2.5px #07c4c4;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 20px 20px;
+}
+.cuadro .dos-columnas img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
 .columna .cintas {
     padding: 20px 0;
     width: 100%;
@@ -451,7 +485,16 @@ article .cinta-text {
     margin: 0 auto;
     /* Center the image horizontally */
 }
-
+#playOthers{
+    text-align: center;
+    justify-self: center;
+}
+#playOthers img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    
+}
 /* footer */
 footer {
     background: url('imagenes/grass.webp');
@@ -851,11 +894,95 @@ footer .columna {
     .nav-links.active {
         display: flex;
     }
+    .sin-fondo {
+        padding: 20px;
+    }
+    .sin-fondo .cintas{
+        text-align: center;
+    }
+
+    .sin-fondo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cuadro {
+        margin: 5vh 5vw;
+        padding: 20px;
+        width: 90vw;
+    }
+
+    .cuadro h2 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .cuadro p {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .cuadro .dos-columnas {
+        border: none;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .cuadro .dos-columnas .columna {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .cuadro .dos-columnas img {
+        width: 100%;
+        height: auto;
+    }
 
 }
-
 footer i {
     color: white;
     font-size: 2rem;
     padding: 0 10px;
+}
+/* PANTALLAS MEDIANAS */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sin-fondo {
+        padding: 40px;
+    }
+
+    .sin-fondo img {
+        width: 80%;
+        height: auto;
+    }
+
+    .cuadro {
+        margin: 10vh 10vw;
+        padding: 30px;
+        width: 80vw;
+    }
+
+    .cuadro h2 {
+        font-size: 2.2rem;
+        padding: 15px;
+    }
+
+    .cuadro p {
+        font-size: 1.4rem;
+        padding: 15px;
+    }
+
+    .cuadro .dos-columnas {
+        border: none;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .cuadro .dos-columnas .columna {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .cuadro .dos-columnas img {
+        width: 100%;
+        height: auto;
+    }
 }
