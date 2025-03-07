@@ -485,7 +485,16 @@ article .cinta-text {
     margin: 0 auto;
     /* Center the image horizontally */
 }
-
+#playOthers{
+    text-align: center;
+    justify-self: center;
+}
+#playOthers img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    
+}
 /* footer */
 footer {
     background: url('imagenes/grass.webp');
