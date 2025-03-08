@@ -41,9 +41,20 @@ footer {
     text-align: center;
     align-self: center;
 }
-header h1, header h2{
+.hideText h1, .hideText h2{
     display: none;
 }
+#contact-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px; /* Añade más espacio entre el navbar y la cinta */
+    text-align: center;
+    margin: 0 auto; /* Centra el contenedor en el ancho de la página */
+    max-width: 1600px;
+}
+
 
 #portada-mobile,
 .image-mobile {
@@ -211,7 +222,7 @@ article {
         2px 2px 0 #ffffff;
 }
 
-article .cintas {
+article .cintas , header .cintas{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,7 +324,7 @@ article .cintas {
     z-index: 1;
 }
 
-article .cinta-text {
+article .cinta-text , header .cinta-text{
     color: white;
     font-size: 2.5vw;
     font-weight: 700;
@@ -485,7 +496,71 @@ article .cinta-text {
     margin: 0 auto;
     /* Center the image horizontally */
 }
-#playOthers{
+.others-info {
+    margin: 0 auto; /* Centra el contenedor en el ancho de la página */
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+    padding: 20px;
+}
+.others-info .cintas{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.others-info div .cintas img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.others-info div .cintas .cinta-text{
+    font-size: 2.5rem;
+    padding: 0 20px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowwrap;
+    width: 90%;
+}
+.others-info .dos-columnas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    border: 2px solid #d1b3a2; /* Añade bordes a los divs .dos-columnas */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
+}
+
+.others-info .columna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra el contenido de las .columna */
+    width: 100%;
+    padding: 20px;
+}
+
+.others-info .columna img {
+    width: 30vw;
+    max-width: 300px; /* Ajusta el tamaño máximo según sea necesario */
+    height: 25vh; /* Hace que las imágenes sean cuadradas */
+    object-fit: cover; /* Asegura que las imágenes se ajusten correctamente */
+    border-radius: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
+}
+
+.others-info .columna p {
+    text-align: center; /* Centra el texto dentro de las .columna */
+    font-size: 1.7rem;
+    color: var(--parrafos);
+    padding: 10px;
+}
+/* #playOthers{
     text-align: center;
     justify-self: center;
 }
@@ -494,7 +569,70 @@ article .cinta-text {
     height: auto;
     border-radius: 30px;
     
+} */
+ /* FORM */
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 15px 160px;
+    border: 2px solid var(--verde_oscuro);
+    border-radius: 10px;
+    background-color: #d1ecdb;
 }
+
+form div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto del label */
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="tel"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--verde_oscuro);
+    border-radius: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    font-size: 1rem;
+}
+form label[for="terms"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 27px 0px; /* Añade más padding en la parte superior */
+    font-weight: bold;
+    text-align: center; /* Centra el texto del label */
+    white-space: nowrap;
+}
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--verde_oscuro);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--verde_claro);
+}
+
 /* footer */
 footer {
     background: url('imagenes/grass.webp');
@@ -822,7 +960,7 @@ footer .columna {
         margin: 10px 0;
     }
 
-    article .cinta-text {
+    article .cinta-text , header .cinta-text{
         font-size: 6vw;
     }
 
@@ -937,6 +1075,38 @@ footer .columna {
         height: auto;
     }
 
+    /* FORM */
+    #contact-header {
+        padding-top: 80px; /* Ajusta el espacio entre el navbar y la cinta en pantallas pequeñas */
+    }
+
+    #contact-header .cintas img {
+        width: 180%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    #contact-header .cinta-text {
+        font-size: 1.7rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+   
+    form {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    form div {
+        margin-bottom: 10px;
+    }
+    form .dos-columnas{
+        padding-bottom: 0px;
+    }
+    form button {
+        
+        width: 100%;
+    }
+    form label[for="terms"] {
+        padding: 20px 0px; /* Añade más padding en la parte superior */
+    }
+    
 }
 footer i {
     color: white;

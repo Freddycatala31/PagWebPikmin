@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+    <link rel="icon" href="imagenes/logo-02.png">  
+    <title>Contact</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="imagenes/logo-02.png" alt="" onclick="toggleMenu()">
+        <ul class="nav-links">
+            <a href="index.html"><li class="opciones">HOME</li></a>
+            <a href="info.html"><li class="opciones">INFORMATION</li></a>
+            <a href="#"><li id="li_active" class="opciones">CONTACT</li></a>
+            <a href="https://store.pikminbloom.com"><li ><img id="enlace-tienda" src="imagenes/enlace_tienda.png" alt=""></li></a>
+        </ul>
+    </nav>
+    <header id="contact-header">
+            <div class="cintas">
+                <h2 class="cinta-text" id="info-title" >Contact Us!</h2>
+                <img  class="cintas" src="imagenes/cinta-02.png" alt="">
+            </div>      
+    </header>
+    <article id="artForm">
+        <form action="http://www.cursos-diseño.es/mostrar.php" method="post">
+            <div class="dos-columnas">
+                <div class="columna">
+                    <div>
+                        <label for="nombre">*Name:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="name">*Surnames:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="age">*Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div>
+                        <label for="address">*Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div>
+                        <label for="nif">*NIF:</label>
+                        <input type="text" id="nif" name="nif" required>
+                    </div>
+                    <div>
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">*Telephone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div>
+                        <label for="terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            *Accept terms and conditions 
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <img id="pikmin-border" src="" alt="">
+    </article>
+    <footer>
+        <aside><img class="divider" src="imagenes/flower_divider.svg" alt=""></aside>
+        <div class="dos-columnas">
+            <div class="columna">
+                <img id="logo-app" src="imagenes/logo-border-mini.jpg" alt="">
+            </div>
+            <div class="columna">
+                <h3>
+                    Descárgalo aquí
+                </h3>
+                <img class="download-app" src="imagenes/googleplay_es.png" alt="">
+                <img class="download-app" src="imagenes/appstore_badge_black_es.svg" alt="">
+            </div>
+        </div>
+        <!-- 	Pie de página, con enlaces al sitio web real y a las páginas reales de redes sociales -->
+        <div id="iconos-enlaces">
+            <a href="https://pikminbloom.com/en">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+            <a href="https://x.com/PikminBloom">
+                <i class="fa-brands fa-square-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/pikminbloom/?hl=es">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+        </div>
+        <div id="privacidad">
+            <a href="privacidad.html">Política de privacidad</a>
+            <p>Pikmin Bloom Copyright ©️ 2021 Niantic, Inc., Pikmin and Mii Characters / Artwork / Music Copyright ©️ 2021 Nintendo All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
