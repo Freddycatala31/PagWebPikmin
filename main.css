@@ -130,7 +130,8 @@ nav .logo {
     height: 90px;
     margin-left: 20px !important;
     z-index: 11;
-    /* Ensure the logo is above the menu */
+    filter: drop-shadow(0 2px 5px rgba(66, 76, 84, 0.7));
+   
 }
 
 nav ul {
@@ -632,6 +633,28 @@ form button {
 form button:hover {
     background-color: var(--verde_claro);
 }
+#pikmin-border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 60px; /* Añade un margen superior e inferior */
+    width: 100% !important;
+}
+
+#pikmin-border img {
+    width: auto; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: 40vh;
+    padding-bottom: 40px;
+    filter: drop-shadow(0 2px 5px rgba(66, 76, 84, 0.7));
+}
+
+#derecha {
+    align-self: flex-end; /* Alinea la imagen a la derecha */
+}
+
+#izq {
+    align-self: flex-start; /* Alinea la imagen a la izquierda */
+}
 
 /* footer */
 footer {
@@ -640,6 +663,7 @@ footer {
     background-size: cover;
     height: fit-content;
 }
+
 
 .divider {
     margin: auto;
@@ -849,9 +873,8 @@ footer .columna {
 
     /* NAVBAR (s) */
     nav .logo :hover {
-        /* transform: scale(1.1); */
-        border-radius: 30px;
-        box-shadow: 7px 8px 10px rgb(14, 20, 41);
+    
+        filter: drop-shadow(0 4px 8px rgba(184, 223, 255, 1));
     }
 
     /*(s) ARTICLE */
@@ -1089,7 +1112,7 @@ footer .columna {
     }
    
     form {
-        padding: 10px;
+        padding: 10px 60px;
         margin-bottom: 20px;
     }
 
@@ -1106,7 +1129,9 @@ footer .columna {
     form label[for="terms"] {
         padding: 20px 0px; /* Añade más padding en la parte superior */
     }
-    
+    #pikmin-border {
+        display: none;
+    }
 }
 footer i {
     color: white;
