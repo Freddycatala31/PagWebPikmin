@@ -704,12 +704,14 @@ footer .columna {
 }
 
 #privacidad a {
-    color: white;
+    color: white !important;
     padding-bottom: 20px;
     display: block;
     margin-bottom: 20px;
 }
-
+#privacidad a:hover{
+    color: var(--parrafos) !important;
+}
 /* PRIVACIDAD */
 #privacidad {
 
@@ -850,7 +852,6 @@ footer .columna {
 
     #portada-mobile,
     .image-mobile {
-
         background-size: cover;
         width: 100%;
         display: block;
@@ -1139,7 +1140,8 @@ footer i {
     padding: 0 10px;
 }
 /* PANTALLAS MEDIANAS */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* 1024 */
+@media (min-width: 769px) and (max-width: 1460px) {
     .sin-fondo {
         padding: 40px;
     }
