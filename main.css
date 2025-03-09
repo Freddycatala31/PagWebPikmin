@@ -20,6 +20,7 @@ body {
 }
 
 body {
+    
     background: url('imagenes/texture-bg.jpg');
     background-repeat: repeat;
     font-family: "Outfit", serif;
@@ -613,35 +614,25 @@ footer {
                 background-color: var(--verde_claro);
             }
             #pikmin-border {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 margin: 20px 0 60px; 
+                height: 20vh;
                 width: 100% !important;
             }
-            
-            #pikmin-border img {
-                width: auto; 
-                height: 40vh;
-                padding-bottom: 40px;
-                filter: drop-shadow(0 2px 5px rgba(66, 76, 84, 0.7));
-            }
-            
-            #derecha {
-                align-self: flex-end; 
-            }
-            
-            #izq {
-                align-self: flex-start; 
-            }
+           
     /* FOOTER (L)*/
         footer {
+            margin-bottom: 0;
+            padding-bottom: 50px;
             background: url('imagenes/grass.webp');
             background-repeat: repeat;
             background-size: cover;
             height: fit-content;
+           
         }
-        
+        footer p{
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
         
         .divider {
             margin: auto;
@@ -855,15 +846,22 @@ footer {
         }
     
         nav ul a li {
+            width: 25vw;
             margin: 10px 0;
+            display: flex;
+            justify-content: center; 
+            
+            
         }
         .nav-links {
+            
             display: flex;
             justify-content: center;
             align-items: center;
         }
     
         .nav-links.active {
+            
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -874,6 +872,7 @@ footer {
         }
     
         .nav-links a {
+            text-decoration: none !important;
             width: 100%;
         }
     
@@ -923,7 +922,7 @@ footer {
                 padding: 20px;
                 margin: 0 auto;
                 max-width: 1600px;
-                height: 100vh;
+                height: 55vh;
             }
             .intro .cintas{
                 padding: 20px 0;
@@ -1021,6 +1020,33 @@ footer {
                 width: 100%;
                 height: auto;
             }
+             .others-info{
+                margin: 0 auto;
+                max-width: 1600px; 
+                padding: 20px;
+                width: calc(100% - 40px);
+            
+            }
+            #cinta-grande{
+                width: 100% ;
+            }
+            #caracteristicas{
+                width: 100%;
+            }
+           #caracteristicas .cintas img {
+                width: 75% ; 
+                height: auto;
+            }
+        
+            #caracteristicas .cinta-text {
+                font-size: 1.3rem; 
+                padding: 0 10px;
+            }
+            #caracteristicas .columna img{
+                width: 200vw;
+                height: 30vh;
+            }
+            /* BUSCAR */
         /* CARROUSEL (S)*/
             .carrousel {
                 width: 100%;
